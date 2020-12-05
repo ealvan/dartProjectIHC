@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_auth_buttons/flutter_auth_buttons.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:tabs_flutter/generated/l10n.dart';
 
 void main() {
   runApp(MyApp1());
@@ -13,6 +15,13 @@ class MyApp1 extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: MyHome(title: "Flutter Login"),
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        S.delegate,
+      ],
+      supportedLocales: S.delegate.supportedLocales,
     );
   }
 }
@@ -86,7 +95,7 @@ class _MyHome extends State<MyHome> {
               size: IconTheme.of(context).size,
               color: IconTheme.of(context).color),
           contentPadding: EdgeInsets.all(5.0),
-          hintText: "ingrese su usuario",
+          hintText: S.of(context).loginUserText1,
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(12.0)),
         ));
     // email Field
@@ -105,7 +114,7 @@ class _MyHome extends State<MyHome> {
             size: IconTheme.of(context).size,
             color: IconTheme.of(context).color),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(12.0)),
-        hintText: 'ingrese su contraseña',
+        hintText: S.of(context).loginPaswordText1,
       ),
       autofocus: false,
       obscureText: true,
@@ -117,7 +126,7 @@ class _MyHome extends State<MyHome> {
             size: IconTheme.of(context).size,
             color: IconTheme.of(context).color),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(12.0)),
-        hintText: 'confirme su contraseña',
+        hintText: S.of(context).loginConfirmPassw1,
       ),
       autofocus: false,
       obscureText: true,
@@ -136,12 +145,12 @@ class _MyHome extends State<MyHome> {
               return AlertDialog(
                 // Retrieve the text the user has entered by using the
                 // TextEditingController.
-                content: Text('su registro fue exitoso!!'),
+                content: Text(S.of(context).loginSucces1),
               );
             },
           );
         },
-        child: Text("Registrate!",
+        child: Text(S.of(context).registe1,
             textAlign: TextAlign.center,
             style: style.copyWith(
                 color: Colors.white,

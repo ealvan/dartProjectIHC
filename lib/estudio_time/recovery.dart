@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:tabs_flutter/generated/l10n.dart';
 
 class Recovery extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
       home: new RecoveryPage(),
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        S.delegate,
+      ],
+      supportedLocales: S.delegate.supportedLocales,
     );
   }
 }
@@ -35,7 +44,7 @@ class _RecoveryPageState extends State<RecoveryPage> {
                     Container(
                       padding: EdgeInsets.fromLTRB(10.0, 10.0, 0.0, 0.0),
                       child: Text(
-                        '¿Olvidaste tu contraseña?',
+                        S.of(context).loginMissPassword,
                         style: TextStyle(
                             fontSize: 30.0, fontWeight: FontWeight.bold),
                       ),
@@ -49,7 +58,9 @@ class _RecoveryPageState extends State<RecoveryPage> {
                     children: <Widget>[
                       TextField(
                         decoration: InputDecoration(
-                            labelText: 'Introduce tu correo electrónico',
+                            labelText: S
+                                .of(context)
+                                .insertMissPasword, //ingrese su email es
                             labelStyle: TextStyle(
                                 fontFamily: 'Montserrat',
                                 fontWeight: FontWeight.bold,
@@ -62,8 +73,7 @@ class _RecoveryPageState extends State<RecoveryPage> {
                       SizedBox(height: 10.0),
                       TextField(
                         decoration: InputDecoration(
-                            labelText:
-                                'Introduce tu teléfono para verificar tu identidad',
+                            labelText: S.of(context).insertMissPhone,
                             labelStyle: TextStyle(
                                 fontFamily: 'Montserrat',
                                 fontWeight: FontWeight.bold,
@@ -75,7 +85,7 @@ class _RecoveryPageState extends State<RecoveryPage> {
                       SizedBox(height: 10.0),
                       TextField(
                         decoration: InputDecoration(
-                            labelText: 'Introduce la clave de 6 dígitos',
+                            labelText: S.of(context).insertMissKey,
                             labelStyle: TextStyle(
                                 fontFamily: 'Montserrat',
                                 fontWeight: FontWeight.bold,
@@ -95,7 +105,7 @@ class _RecoveryPageState extends State<RecoveryPage> {
                               onTap: () {},
                               child: Center(
                                 child: Text(
-                                  'ENVIAR',
+                                  S.of(context).sendMiss,
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold,
@@ -121,7 +131,7 @@ class _RecoveryPageState extends State<RecoveryPage> {
                               Navigator.of(context).pop();
                             },
                             child: Center(
-                              child: Text('ATRÁS',
+                              child: Text(S.of(context).goBackMiss,
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontFamily: 'Montserrat')),
@@ -131,27 +141,6 @@ class _RecoveryPageState extends State<RecoveryPage> {
                       ),
                     ],
                   )),
-              // SizedBox(height: 15.0),
-              // Row(
-              //   mainAxisAlignment: MainAxisAlignment.center,
-              //   children: <Widget>[
-              //     Text(
-              //       'New to Spotify?',
-              //       style: TextStyle(
-              //         fontFamily: 'Montserrat',
-              //       ),
-              //     ),
-              //     SizedBox(width: 5.0),
-              //     InkWell(
-              //       child: Text('Register',
-              //           style: TextStyle(
-              //               color: Colors.green,
-              //               fontFamily: 'Montserrat',
-              //               fontWeight: FontWeight.bold,
-              //               decoration: TextDecoration.underline)),
-              //     )
-              //   ],
-              // )
             ]));
   }
 }

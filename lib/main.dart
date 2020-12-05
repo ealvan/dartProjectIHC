@@ -1,8 +1,10 @@
-import 'package:flutter/material.dart';
-import 'package:tabs_flutter/estudio_time/Usuarios.dart';
 import 'package:tabs_flutter/estudio_time/login.dart';
-import 'package:tabs_flutter/estudio_time/recovery.dart';
+import 'package:flutter/material.dart';
 import 'package:tabs_flutter/estudio_time/valid_aux.dart';
+import 'package:tabs_flutter/estudio_time/Usuarios.dart';
+import 'package:tabs_flutter/estudio_time/Recovery.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:tabs_flutter/generated/l10n.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
                 Tab(icon: Icon(Icons.mail_outline_rounded)),
               ],
             ),
-            title: Text('App Alianza Lima'),
+            title: Text(S.of(context).titleText),
           ),
           body: TabBarView(
             children: [
@@ -36,6 +38,13 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        S.delegate,
+      ],
+      supportedLocales: S.delegate.supportedLocales,
     );
   }
 }

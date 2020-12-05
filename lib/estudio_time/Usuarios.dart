@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:tabs_flutter/generated/l10n.dart';
 //void main() => runApp(Usuarios());
 
 class Usuarios extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Lista de Usuarios',
+      title: S.of(context).userList,
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Lista de Usuarios'),
+          title: Text(S.of(context).userList),
         ),
         body: ListView(
           children: [
@@ -163,6 +164,13 @@ class Usuarios extends StatelessWidget {
           child: new Icon(Icons.add),
         ),
       ),
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        S.delegate,
+      ],
+      supportedLocales: S.delegate.supportedLocales,
     );
   }
 }

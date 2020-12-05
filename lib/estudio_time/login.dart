@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:tabs_flutter/generated/l10n.dart';
 
 void main() => runApp(new Login());
 //est ees el login como le hace mas chico???
@@ -8,6 +10,13 @@ class Login extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       home: new MyHomePage(),
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        S.delegate,
+      ],
+      supportedLocales: S.delegate.supportedLocales,
     );
   }
 }
@@ -36,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   Container(
                     padding: EdgeInsets.fromLTRB(6.0, 45.0, 0.0, 0.0),
-                    child: Text('Iniciar Sesión',
+                    child: Text(S.of(context).loginIn,
                         style: TextStyle(
                             fontSize: 30.0, fontWeight: FontWeight.bold)),
                   ),
@@ -49,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: <Widget>[
                     TextField(
                       decoration: InputDecoration(
-                          labelText: 'USUARIO',
+                          labelText: S.of(context).loginUser,
                           labelStyle: TextStyle(
                               fontFamily: 'Montserrat',
                               fontWeight: FontWeight.bold,
@@ -60,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     SizedBox(height: 10.0),
                     TextField(
                       decoration: InputDecoration(
-                          labelText: 'CONTRASEÑA',
+                          labelText: S.of(context).loginPassword,
                           labelStyle: TextStyle(
                               fontFamily: 'Montserrat',
                               fontWeight: FontWeight.bold,
@@ -75,7 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       padding: EdgeInsets.only(top: 15.0, left: 20.0),
                       child: InkWell(
                         child: Text(
-                          '¿Olvidaste tu contraseña?',
+                          S.of(context).loginForgetPassword,
                           style: TextStyle(
                               color: Colors.green,
                               fontWeight: FontWeight.bold,
@@ -96,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           onTap: () {},
                           child: Center(
                             child: Text(
-                              'INGRESAR',
+                              S.of(context).loginIn.toUpperCase(),
                               style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
@@ -126,7 +135,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                             SizedBox(width: 10.0),
                             Center(
-                              child: Text('Ingresar por EMAIL',
+                              child: Text(S.of(context).loginEmail,
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontFamily: 'Montserrat')),
@@ -142,7 +151,7 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text(
-                  '¿No tienes cuenta?',
+                  S.of(context).missCount,
                   style: TextStyle(fontFamily: 'Montserrat'),
                 ),
                 SizedBox(width: 5.0),
@@ -151,7 +160,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Navigator.of(context).pushNamed('/signup');
                   },
                   child: Text(
-                    'Registrate',
+                    S.of(context).registe1,
                     style: TextStyle(
                         color: Colors.green,
                         fontFamily: 'Montserrat',
