@@ -39,6 +39,6 @@ flutter:
   assets:
     - assets/images/fairy.jpg
 flutter_intl:
-  enabled: true
+  enabled: false
   main_locale: en
   class_name: S

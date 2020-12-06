@@ -1,0 +1,24 @@
+{
+    "titleText":"App Alianza Lima",
+    "loginUserText1": "Digite seu nome de usuário",
+    "loginPaswordText1": "Digite sua senha",
+    "loginConfirmPassw1": "Confirme sua senha",
+    "loginSucces1": "Seu registro foi realizado com sucesso !!",
+    "registe1":"Registre-se !",
+
+    "loginMissPassword":"Esqueceu sua senha?",
+    "insertMissPasword":"Digite seu e-mail",
+    "insertMissPhone":"Digite seu número de telefone para confirmar",
+    "insertMissKey":"Digite os 6 dígitos",
+    "sendMiss":"ENVIAR!!",
+    "goBackMiss":"Voltar",
+
+    "userList": "Lista de usuários",
+
+    "loginIn": "Login",
+    "loginUser": "USUÁRIO",
+    "loginPassword":"PASSWORD",
+    "loginForgetPassword": "Esqueceu sua senha?",
+    "loginEmail":"Entrar por e-mail",
+    "missCount":"Não tem uma conta?"  
+}

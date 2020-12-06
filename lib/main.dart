@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
                 Tab(icon: Icon(Icons.mail_outline_rounded)),
               ],
             ),
-            title: Text(S.of(context).titleText),
+            title: Text('App Alianza Lima'),
           ),
           body: TabBarView(
             children: [
