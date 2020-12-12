@@ -5,6 +5,7 @@ import 'package:tabs_flutter/estudio_time/Usuarios.dart';
 import 'package:tabs_flutter/estudio_time/Recovery.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:tabs_flutter/generated/l10n.dart';
+import 'package:tabs_flutter/charts/home.dart';
 
 void main() {
   runApp(MyApp());
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
           ),
           body: TabBarView(
             children: [
-              Login(),
+              HomePage(),
               MyApp1(),
               Usuarios(),
               Recovery(),
