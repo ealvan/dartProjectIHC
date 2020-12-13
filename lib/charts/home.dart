@@ -8,27 +8,27 @@ class HomePage extends StatelessWidget {
     SubscriberSeries(
       year: "2008",
       subscribers: 28,
-      barColor: charts.ColorUtil.fromDartColor(Colors.blue),
+      barColor: charts.ColorUtil.fromDartColor(Colors.brown),
     ),
     SubscriberSeries(
       year: "2009",
       subscribers: 32,
-      barColor: charts.ColorUtil.fromDartColor(Colors.blue),
+      barColor: charts.ColorUtil.fromDartColor(Colors.cyan),
     ),
     SubscriberSeries(
       year: "2010",
       subscribers: 44,
-      barColor: charts.ColorUtil.fromDartColor(Colors.blue),
+      barColor: charts.ColorUtil.fromDartColor(Colors.greenAccent),
     ),
     SubscriberSeries(
       year: "2011",
       subscribers: 56,
-      barColor: charts.ColorUtil.fromDartColor(Colors.blue),
+      barColor: charts.ColorUtil.fromDartColor(Colors.indigoAccent),
     ),
     SubscriberSeries(
       year: "2012",
       subscribers: 48,
-      barColor: charts.ColorUtil.fromDartColor(Colors.blue),
+      barColor: charts.ColorUtil.fromDartColor(Colors.red),
     ),
   ];
   @override

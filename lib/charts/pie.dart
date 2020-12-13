@@ -18,11 +18,11 @@ class _MiAppState extends State<MiApp> {
 
   generateData() {
     var piedata = [
-      new PieData('Work', 35.8),
-      new PieData('Eat', 8.3),
-      new PieData('Commute', 10.8),
-      new PieData('TV', 15.6),
-      new PieData('Sleep', 19.2),
+      new PieData('AlianzaLima', 35.8),
+      new PieData('Cristal', 8.3),
+      new PieData('Cienciano', 10.8),
+      new PieData('AyacuchoFC', 15.6),
+      new PieData('SportHuancayo', 19.2),
       new PieData('Other', 10.3),
     ];
     _pieData.add(
@@ -45,7 +45,7 @@ class _MiAppState extends State<MiApp> {
           body: Center(
             child: charts.PieChart(
               generateData(),
-              animate: true,
+              animate: false,
               animationDuration: Duration(seconds: 5),
               defaultRenderer: new charts.ArcRendererConfig(
                 arcWidth: 100,
