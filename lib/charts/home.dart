@@ -34,10 +34,6 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blueAccent,
-        title: Text("App Alianza Lima"),
-      ),
       body: Center(
           child: SubscriberChart(
         data: data,

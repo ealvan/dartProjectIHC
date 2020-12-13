@@ -1,5 +1,5 @@
 import 'package:charts_flutter/flutter.dart' as charts;
-import 'package:bar_wow/subscriber_series.dart';
+import 'package:tabs_flutter/charts/subscriber_series.dart';
 import 'package:flutter/material.dart';
 
 class SubscriberChart extends StatelessWidget {
