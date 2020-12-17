@@ -3,7 +3,6 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:tabs_flutter/generated/l10n.dart';
 
 void main() => runApp(new Login());
-//est ees el login como le hace mas chico???
 
 class Login extends StatelessWidget {
   @override
