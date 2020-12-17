@@ -3,6 +3,7 @@ import 'package:tabs_flutter/charts/Statistics.dart';
 import 'package:tabs_flutter/estudio_time/Usuarios.dart';
 import 'package:tabs_flutter/estudio_time/valid_aux.dart';
 import 'package:tabs_flutter/estudio_time/gallery.dart';
+import 'package:tabs_flutter/estudio_time/crud.dart';
 
 class Nav extends StatefulWidget {
   NavState createState() => NavState();
@@ -21,7 +22,7 @@ class NavState extends State<Nav> {
       case 3:
         return MyApp1();
       case 4:
-        return null;
+        return Crud();
     }
   }
 
