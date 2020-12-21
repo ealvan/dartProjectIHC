@@ -36,8 +36,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "loginUser" : MessageLookupByLibrary.simpleMessage("USUARIO"),
     "loginUserText1" : MessageLookupByLibrary.simpleMessage("Ingrese su usuario"),
     "missCount" : MessageLookupByLibrary.simpleMessage("No tiene una cuenta?"),
+    "porcent" : MessageLookupByLibrary.simpleMessage("Porcentaje de contribucion al equipo Alianza Lima"),
     "registe1" : MessageLookupByLibrary.simpleMessage("Registrate!!"),
     "sendMiss" : MessageLookupByLibrary.simpleMessage("ENVIAR!!"),
+    "tasaInter" : MessageLookupByLibrary.simpleMessage("Taza de intercambio por equipo"),
+    "tasaLe" : MessageLookupByLibrary.simpleMessage("Lesiones por temporada"),
+    "tasaRe" : MessageLookupByLibrary.simpleMessage("Tasa de remuneraciones por jugadores"),
     "titleText" : MessageLookupByLibrary.simpleMessage("App Alianza Lima"),
     "userList" : MessageLookupByLibrary.simpleMessage("Lista de Usuarios")
   };

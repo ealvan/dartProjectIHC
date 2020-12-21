@@ -26,7 +26,7 @@ class Crud extends StatelessWidget {
                 Tab(icon: Icon(Icons.mail_outline_rounded)),
               ],
             ),
-            title: Text(S.of(context).titleText),
+            title: Text("Crud"),
           ),
           body: TabBarView(
             children: [

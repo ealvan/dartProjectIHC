@@ -3,13 +3,14 @@ import 'package:tabs_flutter/charts/Statistics.dart';
 import 'package:tabs_flutter/estudio_time/Usuarios.dart';
 import 'package:tabs_flutter/estudio_time/valid_aux.dart';
 import 'package:tabs_flutter/estudio_time/gallery.dart';
-import 'package:tabs_flutter/estudio_time/crud.dart';
+import 'package:tabs_flutter/estudio_time/login.dart';
+import 'package:tabs_flutter/estudio_time/recovery.dart';
 
 class Nav extends StatefulWidget {
   NavState createState() => NavState();
 }
 
-class NavState extends State<Nav> {
+class NavState extends State<Nav> with TickerProviderStateMixin {
   int _selectDrawerItem = 0;
   _getDrawerItemWidget(int pos) {
     switch (pos) {
@@ -20,14 +21,17 @@ class NavState extends State<Nav> {
       case 2:
         return Usuarios();
       case 3:
-        return MyApp1();
+        return Recovery();
       case 4:
-        return Crud();
+        return MyApp1();
+      case 5:
+        return Login();
     }
   }
 
   _onSelectPosition(int pos) {
     Navigator.of(context).pop();
+
     setState(() {
       _selectDrawerItem = pos;
     });
@@ -37,7 +41,7 @@ class NavState extends State<Nav> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("My Navigation"),
+        title: Text("App Alianza Lima"),
       ),
       drawer: new Drawer(
         child: ListView(
@@ -52,6 +56,14 @@ class NavState extends State<Nav> {
                   style: TextStyle(fontSize: 40.0),
                 ),
               ),
+            ),
+            new ListTile(
+              title: Text("Login"),
+              leading: Icon(Icons.login_outlined),
+              selected: (5 == _selectDrawerItem),
+              onTap: () {
+                _onSelectPosition(5);
+              },
             ),
             new ListTile(
               title: Text("Galleria"),
@@ -79,7 +91,7 @@ class NavState extends State<Nav> {
               },
             ),
             new ListTile(
-              title: Text("Validacion"),
+              title: Text("Recuperaciòn"),
               leading: Icon(Icons.account_circle),
               selected: (3 == _selectDrawerItem),
               onTap: () {
@@ -87,7 +99,7 @@ class NavState extends State<Nav> {
               },
             ),
             new ListTile(
-              title: Text("Log out"),
+              title: Text("Crear Cuenta Nueva"),
               leading: Icon(Icons.exit_to_app),
               selected: (4 == _selectDrawerItem),
               onTap: () {

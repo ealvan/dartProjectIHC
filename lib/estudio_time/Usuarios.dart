@@ -7,10 +7,10 @@ class Usuarios extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: S.of(context).userList,
+      title: "Lista de Usuarios",
       home: Scaffold(
         appBar: AppBar(
-          title: Text(S.of(context).userList),
+          title: Text("Lista de Usuarios"),
         ),
         body: ListView(
           children: [

@@ -11,24 +11,6 @@ void main() {
   runApp(Statistics());
 }
 
-final m5 = Padding(
-  padding: EdgeInsets.all(8.0),
-  child: Container(
-    child: Center(
-      child: Column(
-        children: <Widget>[
-          Text(
-            'Tasa de remuneraciones por jugadores',
-            style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
-          ),
-          Expanded(
-            child: PointsLineChart.withSampleData(),
-          ),
-        ],
-      ),
-    ),
-  ),
-);
 final m4 = Padding(
   padding: EdgeInsets.all(8.0),
   child: Container(
@@ -101,8 +83,27 @@ final m1 = Padding(
     ),
   ),
 );
+final m5 = Padding(
+  padding: EdgeInsets.all(8.0),
+  child: Container(
+    child: Center(
+      child: Column(
+        children: <Widget>[
+          Text(
+            "Tasa de intercambios por jugador",
+            style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+          ),
+          Expanded(
+            child: PointsLineChart.withSampleData(),
+          ),
+        ],
+      ),
+    ),
+  ),
+);
 
 class Statistics extends StatelessWidget {
+  //********************************************************************* */
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -119,16 +120,10 @@ class Statistics extends StatelessWidget {
                 Tab(icon: Icon(Icons.login_rounded)),
               ],
             ),
-            title: Text('App Alianza Lima'),
+            title: Text('Estadisticas Alianza Lima'),
           ),
           body: TabBarView(
-            children: [
-              HomePage(),
-              m2,
-              m3,
-              m4,
-              m5,
-            ],
+            children: [HomePage(), m2, m3, m4, m5],
           ),
         ),
       ),
@@ -142,3 +137,11 @@ class Statistics extends StatelessWidget {
     );
   }
 }
+/*
+localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        AppStrings.delegate,
+      ],
+*/

@@ -224,6 +224,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Rate of remuneration for players`
+  String get tasaRe {
+    return Intl.message(
+      'Rate of remuneration for players',
+      name: 'tasaRe',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Injuries per season`
+  String get tasaLe {
+    return Intl.message(
+      'Injuries per season',
+      name: 'tasaLe',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Exchange rate per team`
+  String get tasaInter {
+    return Intl.message(
+      'Exchange rate per team',
+      name: 'tasaInter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Percentage of contribution to the Alianza Lima team`
+  String get porcent {
+    return Intl.message(
+      'Percentage of contribution to the Alianza Lima team',
+      name: 'porcent',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

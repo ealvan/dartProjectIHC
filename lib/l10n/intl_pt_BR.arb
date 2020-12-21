@@ -20,5 +20,9 @@
     "loginPassword":"PASSWORD",
     "loginForgetPassword": "Esqueceu sua senha?",
     "loginEmail":"Entrar por e-mail",
-    "missCount":"Não tem uma conta?"  
+    "missCount":"Não tem uma conta?",
+    "tasaRe":"Taxa de remuneração dos jogadores",
+    "tasaLe":"Lesões por temporada",
+    "tasaInter":"Taxa de câmbio por equipe",
+    "porcent":"Porcentagem de contribuição à equipe Alianza Lima"  
 }

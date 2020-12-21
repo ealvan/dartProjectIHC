@@ -20,5 +20,9 @@
     "loginPassword":"PASSWORD",
     "loginForgetPassword": "Did you forget your password?",
     "loginEmail":"Log in for EMAIL",
-    "missCount":"You do not have an account?"   
+    "missCount":"You do not have an account?",
+    "tasaRe":"Rate of remuneration for players",
+    "tasaLe":"Injuries per season",
+    "tasaInter":"Exchange rate per team",
+    "porcent":"Percentage of contribution to the Alianza Lima team" 
 }
